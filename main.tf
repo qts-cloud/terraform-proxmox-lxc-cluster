@@ -1,5 +1,6 @@
 module "lxc" {
-  source = "../lxc"
+  source  = "app.terraform.io/qts/lxc/proxmox"
+  version = "1.0.0"
 
   for_each = local.lxc
   config   = each.value.config
@@ -7,7 +8,7 @@ module "lxc" {
 
 resource "null_resource" "kmsg" {
   for_each = {
-    for k, v in module.lxc: k => v.this
+    for k, v in module.lxc : k => v.this
   }
 
   triggers = {
