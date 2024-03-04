@@ -19,7 +19,7 @@ resource "null_resource" "kmsg" {
     type        = "ssh"
     user        = "root"
     password    = ""
-    private_key = file(local.private_key_path)
+    private_key = local.private_key
     host        = element(split("/", each.value.network.0.ip), 0)
   }
 

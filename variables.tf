@@ -4,11 +4,11 @@ variable "config" {
     # (Required) Provide the hostname prefix. Generated hostnames would be <prefix>-<index>
     hostname_prefix = string
 
-    # (Required) SSH Public Key path stored in the Proxmox CTs
-    public_key_path = string
+    # (Required) SSH Public Key
+    public_key = string
 
-    # (Required) SSH Private Kye path used by the provisioner
-    private_key_path = string
+    # (Required) SSH Private Key
+    private_key = string
 
     # (Required) Provide required host and optional network configuration.
     targets = list(object({
