@@ -25,7 +25,7 @@ resource "null_resource" "kmsg" {
 
   provisioner "remote-exec" {
     inline = [
-      "echo 'Configuring /dev/kmsg'...",
+      "echo 'Configuring /dev/kmsg...'",
       "echo -e '[Unit]\nDescription=Create /dev/kmsg symlink\n\n[Service]\nType=oneshot\nExecStart=/bin/ln -sf /dev/console /dev/kmsg\nRemainAfterExit=yes\n\n[Install]\nWantedBy=multi-user.target' > /etc/systemd/system/kmsg.service",
       "systemctl enable kmsg.service",
       "systemctl start kmsg.service"
