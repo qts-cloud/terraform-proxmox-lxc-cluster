@@ -1,3 +1,20 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+# [1.1.0](https://github.com/qts-cloud/terraform-proxmox-lxc-cluster/compare/v1.0.4...v1.1.0) (2025-02-22)
+
+
+### Bug Fixes
+
+* head ref pr for terraform docs ([6d0b043](https://github.com/qts-cloud/terraform-proxmox-lxc-cluster/commit/6d0b04309747b91c60ed8d2ca4c07d30573e60ec))
+* pre-commit ([2d37820](https://github.com/qts-cloud/terraform-proxmox-lxc-cluster/commit/2d378200e8e52d90d1e93ce700c5e8b11955b281))
+
+
+### Features
+
+* update structure and configuration ([038e984](https://github.com/qts-cloud/terraform-proxmox-lxc-cluster/commit/038e98441195949f4b3c5e9ed13e708ac7459843))
+
 ## [1.0.4](https://github.com/qts-cloud/terraform-proxmox-lxc-cluster/compare/v1.0.3...v1.0.4) (2024-03-07)
 
 
