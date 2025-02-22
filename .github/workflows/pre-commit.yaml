@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         ref: ${{ github.event.pull_request.head.ref }}
 
@@ -24,16 +24,16 @@ jobs:
         node-version: 16
 
     - name: setup terraform
-      uses: hashicorp/setup-terraform@v2
+      uses: hashicorp/setup-terraform@v3
+
+    - name: run pre-commit checks
+      uses: pre-commit/action@v3.0.1
 
     - name: render terraform docs
-      uses: terraform-docs/gh-actions@v1.0.0
+      uses: terraform-docs/gh-actions@v1
       with:
         find-dir: .
         output-file: README.md
         output-method: inject
         git-push: "true"
         config-file: .terraform-docs.yml
-
-    - name: run pre-commit checks
-      uses: pre-commit/action@v3.0.0

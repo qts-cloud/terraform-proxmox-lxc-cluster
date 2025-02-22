@@ -4,13 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '**/*.tpl'
-      - '**/*.tfpl'
-      - '**/*.tmpl'
-      - '**/*.tf'
-      - '**/*.hcl'
-      - '.github/workflows/*.yaml'
 
 jobs:
   release:
@@ -24,4 +17,4 @@ jobs:
         uses: qts-cloud/actions/release@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          ssh-key: ${{ secrets.COMMIT_KEY }}
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
